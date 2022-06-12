@@ -10,22 +10,24 @@ int main()
     scanf("%d", &unit);
     /*
      * Calculates electricity bill according to given conditions
+     * Cost of a unit in India is 7 Rs. 
+     * and increase by 0.05 per increase of units by 50-100.
      */
     if(unit <= 50)
     {
-        amt = unit * 0.50;
+        amt = unit * 7.0;
     }
-    else if(unit <= 150)
+    else if(unit > 50 && unit <= 150)
     {
-        amt = 25 + ((unit-50)*0.75);
+        amt = unit*9.5;
     }
-    else if(unit <= 250)
+    else if(unit > 150 && unit <= 250)
     {
-        amt = 100 + ((unit-150)*1.20);
+        amt = unit*12.0;
     }
     else if(unit > 250)
     {
-        amt = 220 + ((unit-250)*1.50);
+        amt = unit*15.0;
     }
     /*
      * Calculates total electricity bill
